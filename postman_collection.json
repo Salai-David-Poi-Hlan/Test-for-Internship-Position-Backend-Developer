@@ -1,0 +1,194 @@
+{
+    "info": {
+      "name": "Game API",
+      "description": "API for user registration, login, and game interactions",
+      "_postman_id": "12345678-abcd-1234-abcd-1234567890ab",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Register User",
+        "request": {
+          "method": "POST",
+          "url": {
+            "raw": "http://localhost:3000/register",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["register"]
+          },
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"username\":\"testuser\",\"password\":\"password123\",\"email\":\"testuser@example.com\"}"
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Login User",
+        "request": {
+          "method": "POST",
+          "url": {
+            "raw": "http://localhost:3000/login",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["login"]
+          },
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"username\":\"testuser\",\"password\":\"password123\"}"
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Get Players",
+        "request": {
+          "method": "GET",
+          "url": {
+            "raw": "http://localhost:3000/players",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["players"]
+          },
+          "header": [],
+          "body": {}
+        },
+        "response": []
+      },
+      {
+        "name": "Send Game Invitation",
+        "request": {
+          "method": "POST",
+          "url": {
+            "raw": "http://localhost:3000/invitations/send",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["invitations", "send"]
+          },
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"receiver_user_id\":2}"
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "View Received Invitations",
+        "request": {
+          "method": "GET",
+          "url": {
+            "raw": "http://localhost:3000/invitations/received",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["invitations", "received"]
+          },
+          "header": [],
+          "body": {}
+        },
+        "response": []
+      },
+      {
+        "name": "Start Game Against Bot",
+        "request": {
+          "method": "POST",
+          "url": {
+            "raw": "http://localhost:3000/games/bot/start",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["games", "bot", "start"]
+          },
+          "header": [],
+          "body": {}
+        },
+        "response": []
+      },
+      {
+        "name": "Accept Game Invitation",
+        "request": {
+          "method": "POST",
+          "url": {
+            "raw": "http://localhost:3000/invitations/accept",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["invitations", "accept"]
+          },
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"invitation_id\":1}"
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Make a Move in Game",
+        "request": {
+          "method": "POST",
+          "url": {
+            "raw": "http://localhost:3000/games/move",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["games", "move"]
+          },
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"game_id\":1,\"position\":4}"
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Bot Makes a Move",
+        "request": {
+          "method": "POST",
+          "url": {
+            "raw": "http://localhost:3000/games/bot/move",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["games", "bot", "move"]
+          },
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\"game_id\":1,\"position\":5}"
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Get Game History",
+        "request": {
+          "method": "GET",
+          "url": {
+            "raw": "http://localhost:3000/games/history",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["games", "history"]
+          },
+          "header": [],
+          "body": {}
+        },
+        "response": []
+      },
+      {
+        "name": "Home Route",
+        "request": {
+          "method": "GET",
+          "url": {
+            "raw": "http://localhost:3000/",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": []
+          },
+          "header": [],
+          "body": {}
+        },
+        "response": []
+      }
+    ]
+  }
+  
